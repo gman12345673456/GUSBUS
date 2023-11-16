@@ -1,4 +1,3 @@
-print("Hi
-      ")
+print("Hi")
 
 # comment
