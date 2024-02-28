@@ -67,7 +67,7 @@ for row in grid:
 # looping though every row and every column using nested for loops
 for row in grid:
     for word in row:
-        print(word)
+        print(word_categories)
 
 for row in grid:
     print(row [0])
