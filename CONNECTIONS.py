@@ -14,9 +14,10 @@
 
 
 
-word_categories =  [] # set up an empty array for the word categories
+word_categories = ( )  # set up an empty array for the word categories
 
 # establish 4 word categories (cars, smelly, leaderboard, videogames)
+
 cars_category = {
 'category_name': 'lazy',
 'words' : ['Ford', 'Honda','Kia','Toyota']
@@ -37,20 +38,22 @@ video_games_category = {
 'words' : ['Halo', 'Minecraft', 'Pokemon', 'Apex']
 }
 
+
+
+
 # put each category in the word category list that i made above
 # append means add to the end of  
-word_categories.append(cars_category)
-word_categories.append(smelly_category)
+word_categories.append(cars_category) 
+word_categories.append(smelly_category) 
 word_categories.append(leaderboard_category) 
-word_categories.append(video_games_category)
+word_categories.append(video_games_category) 
 
-# establish a 4x4 grid 
-grid = [
-["word","word","word","word",],
-["test","word","word","gus",],
-["next","word","word","test",],
-["word","word","word","lol",],
-]
+
+
+
+numbers = ["1","2","3","4"],["5","6","7","8"],["9","10","11","12"],["13","14","15","16"]
+
+
 
 word_index = 0
 
@@ -66,8 +69,8 @@ for row in grid:
 
 # looping though every row and every column using nested for loops
 for row in grid:
-    for word in row:
-        print(word_categories)
+    for number in row:
+        print(numbers)
 
 for row in grid:
     print(row [0])
