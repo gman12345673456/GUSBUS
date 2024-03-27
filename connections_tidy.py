@@ -1,71 +1,122 @@
-#def generate_categories():
-    #word_categories = []  # set up an empty array for the word categories
 
-    # establish 4 word categories (cars, smelly, leaderboard, videogames)
+# import random
 
-    #cars_category = {
-    #'category_name': 'lazy',
-    #'words' : ['Ford', 'Honda','Kia','Toyota']
-    #}
+# def generate_categories():
+#     cars_category = {'category_name': 'cars', 'words': ['Ford', 'Honda', 'Kia', 'Toyota']}
+#     smelly_category = {'category_name': 'smelly', 'words': ['Stink', 'Rank', 'Reek', 'Stench']}
+#     leaderboard_category = {'category_name': 'leaderboard', 'words': ['podium', 'Placement', 'Score', 'grading']}
+#     video_games_category = {'category_name': 'videogames', 'words': ['Halo', 'Minecraft', 'Pokemon', 'Apex']}
+#     sports_category = {'category_name': 'balls','words':['basketball','soccer','hockey','cricket']}
+#     chocolate_category = {'category_name':'chocolate','words':['cabury','feastables','hershey','lint']}
 
-    #smelly_category = {
-       # 'category_name': 'smelly',
-       # 'words': ['Stink', 'Rank', 'Reek', 'Stench']
-    #}
+#     word_categories = [cars_category, smelly_category, leaderboard_category, video_games_category, sports_category, chocolate_category]
+#     random.shuffle(word_categories)
 
-    #leaderboard_category = {
-    #'category_name': 'leaderboard',
-    #'words' : ['podium', 'Placement', 'Score', 'grading']
-    #}
+#     for category in word_categories:
+#         random.shuffle(category['words'])
 
-    #video_games_category = {
-    #'category_name': 'videogames',
-    #'words' : ['Halo', 'Minecraft', 'Pokemon', 'Apex']
-    #}
+#     return word_categories
 
-    # put each category in the word category list that i made above
-    # append means add to the end of  
-    #word_categories.append(cars_category) 
-   #word_categories.append(smelly_category) 
-   # word_categories.append(leaderboard_category) 
-    #word_categories.append(video_games_category) 
+# def generate_grid():
+#     return [
+#         ["1", "2", "3", "4"],
+#         ["5", "6", "7", "8"],
+#         ["9", "10", "11", "12"],
+#         ["13", "14", "15", "16"],
+#     ]
 
-    #return word_categories
+# def populate_grid_with_words(categories, unpopulated_grid):
+#     flattened_words = [word for category in categories for word in category['words']]
+#     random.shuffle(flattened_words)
 
-#def generate_grid():
-    # establish a 4x4 grid 
-    #["1","2","3","4"],
-    #["5","6","7","8"],
-    #["9","10","11","12"],
-    #["13","14","15","16"],
-    #]
+#     for i in range(4):
+#         for j in range(4):
+#             unpopulated_grid[i][j] = flattened_words.pop(0)
 
-    #return grid 
+#     return unpopulated_grid
 
-#def populate_grid_with_words(categories, unpopulated_grid):
-    #row = 0
-    #for category in categories:
-        #col = 0
-        #for word in category["words"]:
-            # put word in correct grid location
-           # unpopulated_grid[row][col] = word
-            #col = col + 1
-        #row = row + 1
-    
-    #return unpopulated_grid
+# # Mainline
+# categories = generate_categories()
+# unpopulated_grid = generate_grid()
+# populated_grid = populate_grid_with_words(categories, unpopulated_grid)
 
+# # Print the populated grid in a tidy format
+# for row in populated_grid:
+#     print(" ".join(row))
 
-# mainline 
+# # Mainline
+# categories = generate_categories()
+# unpopulated_grid = generate_grid()
+# populated_grid = populate_grid_with_words(categories, unpopulated_grid)
 
+# # Print the populated grid in a grid format in the terminal
+# for row in populated_grid:
+#     print("|", end=" ")  # Print the starting border of the row
+#     for cell in row:
+#         print(cell.center(12), end=" | ")  # Adjust the width as needed
+#     print()  # Move to the next line for the next row
 
 
-#categories = (generate_categories())
-#unpopulated_grid = generate_grid()
-#populated_grid = populate_grid_with_words(categories,unpopulated_grid)
-#print(populated_grid)
+# print("Welcome to connections")
+# print("Please type 4 words that you think would be in a categorie")
 
-#for i in populated_grid:
-    #print(i)
+# import random
+
+# def generate_categories():
+#     cars_category = {'category_name': 'cars', 'words': ['Ford', 'Honda', 'Kia', 'Toyota']}
+#     smelly_category = {'category_name': 'smelly', 'words': ['Stink', 'Rank', 'Reek', 'Stench']}
+#     leaderboard_category = {'category_name': 'leaderboard', 'words': ['podium', 'Placement', 'Score', 'grading']}
+#     video_games_category = {'category_name': 'videogames', 'words': ['Halo', 'Minecraft', 'Pokemon', 'Apex']}
+#     sports_category = {'category_name': 'balls','words':['basketball','soccer','hockey','cricket']}
+#     chocolate_category = {'category_name':'chocolate','words':['cabury','feastables','hershey','lint']}
+
+#     word_categories = [cars_category, smelly_category, leaderboard_category, video_games_category, sports_category, chocolate_category]
+#     random.shuffle(word_categories)
+
+#     for category in word_categories:
+#         random.shuffle(category['words'])
+
+#     return word_categories
+
+# def generate_grid():
+#     return [
+#         ["1", "2", "3", "4"],
+#         ["5", "6", "7", "8"],
+#         ["9", "10", "11", "12"],
+#         ["13", "14", "15", "16"],
+#     ]
+
+# def populate_grid_with_words(categories, unpopulated_grid):
+#     flattened_words = [word for category in categories for word in category['words']]
+#     random.shuffle(flattened_words)
+
+#     for i in range(4):
+#         for j in range(4):
+#             unpopulated_grid[i][j] = flattened_words.pop(0)
+
+#     return unpopulated_grid
+
+# # Mainline
+# categories = generate_categories()
+# unpopulated_grid = generate_grid()
+# populated_grid = populate_grid_with_words(categories, unpopulated_grid)
+
+# # Print the populated grid in a tidy format
+# for row in populated_grid:
+#     print(" ".join(row))
+
+# # Mainline
+# categories = generate_categories()
+# unpopulated_grid = generate_grid()
+# populated_grid = populate_grid_with_words(categories, unpopulated_grid)
+
+# # Print the populated grid in a grid format in the terminal
+# for row in populated_grid:
+#     print("|", end=" ")  # Print the starting border of the row
+#     for cell in row:
+#         print(cell.center(12), end=" | ")  # Adjust the width as needed
+#     print()  # Move to the next line 
+
 import random
 
 def generate_categories():
@@ -102,86 +153,53 @@ def populate_grid_with_words(categories, unpopulated_grid):
 
     return unpopulated_grid
 
-# Mainline
-categories = generate_categories()
-unpopulated_grid = generate_grid()
-populated_grid = populate_grid_with_words(categories, unpopulated_grid)
-
-# Print the populated grid in a tidy format
-for row in populated_grid:
-    print(" ".join(row))
+def check_guess(guess, categories):
+    for category in categories:
+        if guess.capitalize() in category['words']:
+            return True
+    return False
 
 # Mainline
 categories = generate_categories()
 unpopulated_grid = generate_grid()
 populated_grid = populate_grid_with_words(categories, unpopulated_grid)
 
-# Print the populated grid in a grid format in the terminal
-for row in populated_grid:
-    print("|", end=" ")  # Print the starting border of the row
-    for cell in row:
-        print(cell.center(12), end=" | ")  # Adjust the width as needed
-    print()  # Move to the next line for the next row
+# Game setup
+lives = 4
+guessed_words = set()
 
-# import random
+print("Welcome to Connections!")
+print("You have 4 lives. Guess words related to the categories.")
+print("Type 'quit' to exit.")
 
-# def generate_categories():
-#     animals_category = {'category_name': 'animals', 'words': ['Lion', 'Elephant', 'Giraffe', 'Tiger']}
-#     colors_category = {'category_name': 'colors', 'words': ['Red', 'Blue', 'Green', 'Yellow']}
-#     countries_category = {'category_name': 'countries', 'words': ['USA', 'Japan', 'France', 'Brazil']}
-#     fruits_category = {'category_name': 'fruits', 'words': ['Apple', 'Banana', 'Orange', 'Grape']}
+# Game loop
+while lives > 0:
+    # Print the grid
+    print("\nGrid:")
+    for row in populated_grid:
+        print("|", end=" ")
+        for cell in row:
+            print(cell.center(12), end=" | ")
+        print()
 
-#     word_categories = [animals_category, colors_category, countries_category, fruits_category]
-#     random.shuffle(word_categories)
+    # Ask for a guess
+    guess = input("\nEnter your guess: ").strip().capitalize()
 
-#     for category in word_categories:
-#         random.shuffle(category['words'])
+    # Check if the guess is correct
+    if guess.lower() == 'quit':
+        print("Thanks for playing!")
+        break
+    elif guess in guessed_words:
+        print("You've already guessed that word. Try another one.")
+        continue
+    elif check_guess(guess, categories):
+        print("Correct!")
+        guessed_words.add(guess)
+    else:
+        print("Incorrect guess. Try again.")
+        lives -= 1
+        print("You have", lives, "lives remaining.")
 
-#     return word_categories
-
-# def generate_grid():
-#     return [
-#         ["1", "2", "3", "4"],
-#         ["5", "6", "7", "8"],
-#         ["9", "10", "11", "12"],
-#         ["13", "14", "15", "16"],
-#     ]
-
-# def populate_grid_with_words(categories, unpopulated_grid):
-#     flattened_words = [word for category in categories for word in category['words']]
-#     random.shuffle(flattened_words)
-
-#     for i in range(4):
-#         for j in range(4):
-#             unpopulated_grid[i][j] = flattened_words.pop(0)
-
-#     return unpopulated_grid
-
-# def print_tidy_grid(grid):
-#     for row in grid:
-#         print(" ".join(row))
-
-# def print_grid(grid):
-#     for row in grid:
-#         print("|", end=" ")  # Print the starting border of the row
-#         for cell in row:
-#             print(cell.center(12), end=" | ")  # Adjust the width as needed
-#         print()  # Move to the next line for the next row
-
-# def main():
-#     categories = generate_categories()
-#     unpopulated_grid = generate_grid()
-#     populated_grid = populate_grid_with_words(categories, unpopulated_grid)
-
-#     # Print the populated grid in a tidy format
-#     print("Populated Grid:")
-#     print_tidy_grid(populated_grid)
-
-#     print("\nCategories:")
-#     for category in categories:
-#         print(f"{category['category_name']}: {', '.join(category['words'])}")
-
-#     print("\nFind connections between words from different categories!")
-
-# if __name__ == "__main__":
-#     main()
+# Game over
+if lives == 0:
+    print("\nGame over! You've run out of lives.")
