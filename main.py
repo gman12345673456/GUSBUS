@@ -2,10 +2,10 @@ import random
 
 # this is where the dictionaries are entered and put into a long list called word_categories
 def generate_categories():
-    cars_category = {'category_name': 'cars', 'words': ['Ford', 'Honda', 'Kia', 'Toyota']}
-    smelly_category = {'category_name': 'smelly', 'words': ['Stink', 'Rank', 'Reek', 'Stench']}
-    leaderboard_category = {'category_name': 'leaderboard', 'words': ['podium', 'Placement', 'Score', 'grading']}
-    video_games_category = {'category_name': 'videogames', 'words': ['Halo', 'Minecraft', 'Pokemon', 'Apex']}
+    cars_category = {'category_name': 'cars', 'words': ['ford', 'honda', 'kia', 'toyota']}
+    smelly_category = {'category_name': 'smelly', 'words': ['stink', 'rank', 'reek', 'stench']}
+    leaderboard_category = {'category_name': 'leaderboard', 'words': ['podium', 'placement', 'score', 'grading']}
+    video_games_category = {'category_name': 'videogames', 'words': ['halo', 'minecraft', 'pokemon', 'apex']}
     sports_category = {'category_name': 'balls','words':['basketball','soccer','hockey','cricket']}
     chocolate_category = {'category_name':'chocolate','words':['cabury','feastables','hershey','lint']}
     fruits_category = {'category_name':'fruits','words':['apple','orange','banana','pear']}
@@ -86,8 +86,13 @@ while lives > 0:
         print("Incorrect, You lose a life")
         lives = lives - 1
         print("You have ", lives, " remaining.")
+    elif guess in populated_grid:
+        print("You've already guessed that word. Try another one.")
+    elif lives == 1:
+        print("Careful your on your last life")
     else:
         print("Correct, you found a category", check)
+    
     
 
 
@@ -98,21 +103,21 @@ while lives > 0:
 
 
 
-# #     # Check if the guess is correct
-# #     if guess.lower() == 'quit':
-# #         print("Thanks for playing!")
-# #         break
-# #     elif guess in guessed_words:
-# #         print("You've already guessed that word. Try another one.")
-# #         continue
-# #     elif check_guess(guess, categories):
-# #         print("Correct!")
-# #         guessed_words.add(guess)
-# #     else:
-# #         print("Incorrect guess. Try again.")
-# #         lives -= 1
-# #         print("You have", lives, "lives remaining.")
+#     # Check if the guess is correct
+#     if guess.lower() == 'quit':
+#         print("Thanks for playing!")
+#         break
+#     elif guess in guessed_words:
+#         print("You've already guessed that word. Try another one.")
+#         continue
+#     elif check_guess(guess, categories):
+#         print("Correct!")
+#         guessed_words.add(guess)
+#     else:
+#         print("Incorrect guess. Try again.")
+#         lives -= 1
+#         print("You have", lives, "lives remaining.")
 
-# # # Game over
-# # if lives == 0:
-# #     print("\nGame over! You've run out of lives.")
+# # Game over
+# if lives == 0:
+#     print("\nGame over! You've run out of lives.")
