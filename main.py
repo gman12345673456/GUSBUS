@@ -24,7 +24,7 @@ def generate_grid():
         ["1", "2", "3", "4"],
         ["5", "6", "7", "8"],
         ["9", "10", "11", "12"],
-        ["13", "14", "15", "16"],
+        ["13", "14", "15", "16"]
     ]
 
 # this will take all the categories and put the words within them into a long list called flattened words
