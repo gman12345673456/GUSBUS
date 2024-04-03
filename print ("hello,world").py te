@@ -1,6 +1,0 @@
-print ("hello,world")
-name = ("Gus")
-
-if name == ("Gus"):
-    print("Good")
-else: print ("bad")
