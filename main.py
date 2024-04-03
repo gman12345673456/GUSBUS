@@ -10,7 +10,9 @@ def generate_categories():
     chocolate_category = {'category_name':'chocolate','words':['cabury','feastables','hershey','lint']}
     fruits_category = {'category_name':'fruits','words':['apple','orange','banana','pear']}
     elements_category = {'category_name':'elements','words':['fire','water','earth','air']}
-    word_categories = [cars_category, smelly_category, leaderboard_category, video_games_category, sports_category, chocolate_category, fruits_category, elements_category]
+    animals_category = {'category_name': 'animals','words':['girrafe','lion','shark','clownfish']}
+    marsupial_category = {'category_name': 'marsupial','words':['kanagroo','koala','wombat','tassie devil']}
+    word_categories = [cars_category, smelly_category, leaderboard_category, video_games_category, sports_category, chocolate_category, fruits_category, elements_category, animals_category, marsupial_category]
     random.shuffle(word_categories)
 
     for category in word_categories:
